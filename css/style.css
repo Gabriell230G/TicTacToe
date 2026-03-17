@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  #ttt-root {
+    font-family: 'Space Mono', monospace;
+    background: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem 2.5rem;
+    min-height: 620px;
+    gap: 1.5rem;
+    border-radius: 12px;
+  }
+
+  #ttt-title {
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #888;
+  }
+
+  #ttt-status {
+    font-size: 24px;
+    font-weight: 700;
+    color: #d4d0c8;
+    margin-top: 4px;
+    min-height: 36px;
+    letter-spacing: 0.05em;
+  }
+
+  #ttt-scores {
+    display: flex;
+    gap: 12px;
+  }
+
+  .score-card {
+    background: #2a2a2a;
+    border: 1px solid #383838;
+    border-radius: 8px;
+    padding: 10px 20px;
+    text-align: center;
+    min-width: 84px;
+  }
+
+  .score-label {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: #777;
+    text-transform: uppercase;
+  }
+
+  .score-value {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 2px;
+    color: #d4d0c8;
+  }
+
+  .score-card.x-card .score-value { color: #E24B4A; }
+  .score-card.o-card .score-value { color: #378ADD; }
+
+  #ttt-mode {
+    display: flex;
+    gap: 8px;
+  }
+
+  .mode-btn {
+    background: #2a2a2a;
+    border: 1px solid #404040;
+    border-radius: 8px;
+    color: #888;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    padding: 8px 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.12s;
+  }
+
+  .mode-btn.active {
+    background: #333;
+    border-color: #666;
+    color: #d4d0c8;
+  }
+
+  #ttt-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 9px;
+    width: 292px;
+  }
+
+  .cell {
+    width: 91px;
+    height: 91px;
+    background: #2a2a2a;
+    border: 1px solid #383838;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 38px;
+    font-weight: 700;
+    transition: background 0.1s, transform 0.1s;
+    user-select: none;
+  }
+
+  .cell:hover:not(.taken) {
+    background: #333;
+    transform: scale(1.04);
+  }
+
+  .cell.taken { cursor: default; }
+  .cell.x-mark { color: #E24B4A; }
+  .cell.o-mark { color: #378ADD; }
+
+  .cell.winner-cell.x-mark { background: #3a1f1f; border-color: #E24B4A; }
+  .cell.winner-cell.o-mark { background: #1a2a3a; border-color: #378ADD; }
+
+  .cell-inner {
+    display: inline-block;
+    transform: scale(0);
+    transform-origin: center;
+    transition: transform 0.18s cubic-bezier(0.34,1.56,0.64,1);
+  }
+  .cell.taken .cell-inner { transform: scale(1); }
+
+  #ttt-btn {
+    background: #2a2a2a;
+    border: 1px solid #404040;
+    border-radius: 8px;
+    color: #d4d0c8;
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    padding: 11px 28px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.1s, transform 0.1s;
+  }
+
+  #ttt-btn:hover { background: #333; }
+  #ttt-btn:active { transform: scale(0.97); }
+
+  #ttt-footer {
+    font-size: 11px;
+    color: #555;
+    letter-spacing: 0.08em;
+    text-align: center;
+  }

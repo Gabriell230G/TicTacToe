@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="shortcut icon" href="./images/tic-tac-toe.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div id="ttt-root">
+      <div style="text-align: center">
+        <div id="ttt-title">Tic Tac Toe</div>
+        <div id="ttt-status">Vez do X</div>
+      </div>
+
+      <div id="ttt-scores">
+        <div class="score-card x-card">
+          <div class="score-label">X</div>
+          <div class="score-value" id="score-x">0</div>
+        </div>
+        <div class="score-card" style="min-width: 70px">
+          <div class="score-label">Empate</div>
+          <div class="score-value" id="score-draw">0</div>
+        </div>
+        <div class="score-card o-card">
+          <div class="score-label">O</div>
+          <div class="score-value" id="score-o">0</div>
+        </div>
+      </div>
+
+      <div id="ttt-mode">
+        <button class="mode-btn active" id="btn-pvp" onclick="setMode('pvp')">
+          2 jogadores
+        </button>
+        <button class="mode-btn" id="btn-cpu" onclick="setMode('cpu')">
+          vs CPU
+        </button>
+      </div>
+
+      <div id="ttt-board">
+        <div class="cell" onclick="play(0)">
+          <span class="cell-inner" id="c0"></span>
+        </div>
+        <div class="cell" onclick="play(1)">
+          <span class="cell-inner" id="c1"></span>
+        </div>
+        <div class="cell" onclick="play(2)">
+          <span class="cell-inner" id="c2"></span>
+        </div>
+        <div class="cell" onclick="play(3)">
+          <span class="cell-inner" id="c3"></span>
+        </div>
+        <div class="cell" onclick="play(4)">
+          <span class="cell-inner" id="c4"></span>
+        </div>
+        <div class="cell" onclick="play(5)">
+          <span class="cell-inner" id="c5"></span>
+        </div>
+        <div class="cell" onclick="play(6)">
+          <span class="cell-inner" id="c6"></span>
+        </div>
+        <div class="cell" onclick="play(7)">
+          <span class="cell-inner" id="c7"></span>
+        </div>
+        <div class="cell" onclick="play(8)">
+          <span class="cell-inner" id="c8"></span>
+        </div>
+      </div>
+
+      <button id="ttt-btn" onclick="resetGame()">Nova Partida</button>
+      <div id="ttt-footer">
+        X começa sempre &mdash; placar persiste entre partidas
+      </div>
+    </div>
+  </body>
+  <script src="./js/script.js"></script>
+</html>

@@ -104,7 +104,13 @@ O sistema funciona com base em:
 
 ---
 
-## ✨ Autor
+## 📫 Contato
 
-Desenvolvido por **Gabriel Gomes**  
-Focado em criar soluções digitais com impacto e boa experiência do usuário.
+<p align="left">
+  <a href="https://www.linkedin.com/in/gabriel-vasconcellos-gomes-76a246246/">
+    <img src="https://img.shields.io/badge/LinkedIn-Conectar-blue?style=for-the-badge&logo=linkedin">
+  </a>
+  <a href="mailto:gabriel.gomes0410@gmail.com">
+    <img src="https://img.shields.io/badge/Email-Contato-red?style=for-the-badge&logo=gmail">
+  </a>
+</p>

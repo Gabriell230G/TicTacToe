@@ -95,6 +95,11 @@ O sistema funciona com base em:
 
 ---
 
+## 🌐 Acesse o projeto
+https://gabriell230g.github.io/TicTacToe/
+
+---
+
 ## 🛠️ Possíveis Melhorias
 
 ➽ Adicionar níveis de dificuldade para a CPU  

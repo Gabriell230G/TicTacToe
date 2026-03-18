@@ -96,7 +96,7 @@ O sistema funciona com base em:
 ---
 
 ## 🌐 Acesse o projeto
-https://gabriell230g.github.io/TicTacToe/
+🔗 https://gabriell230g.github.io/TicTacToe/
 
 ---
 
